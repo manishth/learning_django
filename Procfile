@@ -1,1 +1,1 @@
-web: gunicorn {{ learning_django }}.wsgi
+web: gunicorn learning_django.wsgi
