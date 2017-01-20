@@ -5,4 +5,4 @@ from django.http import HttpResponse
 # Create your views here.
 def course_list(request):
 	c = Course()
-	return c.title, c.description 
+	return c.title
