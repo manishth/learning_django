@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from courses import views
+from . import views
 
 urlpatterns = [
+	url(r'^courses', include('courses.urls'))
     url(r'^admin/', admin.site.urls),
-    #url(r'^$', views.hello_world),
-    url(r'^course', views.course_list),
+    url(r'^$', views.hello_world),
 ]
