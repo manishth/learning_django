@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from courses.models import Course
 from django.http import HttpResponse
+
+from courses.models import Course
 
 # Create your views here.
 def course_list(request):
 	c = Course()
-	return c.title
+	return HttpResponse(c.title)
