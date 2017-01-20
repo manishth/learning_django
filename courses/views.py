@@ -5,6 +5,6 @@ from courses.models import Course
 
 # Create your views here.
 def course_list(request):
-	c = Course.objects.all()
-	c = ", ".join([str(course) for course in c])
-	return HttpResponse(c)
+	courses = Course.objects.all()
+	output = ", ".join([str(course) for course in courses])
+	return HttpResponse(output)
